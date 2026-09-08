@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iliana: nombres registrados deberán acreditar 5K o perderán la nacionalidad — Tráfico ZMG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --tinta:#16181c;
+    --gris:#5a6069;
+    --linea:#dcdfe4;
+    --papel:#ffffff;
+    --fondo:#f2f3f5;
+    --rojo:#c0182b;
+    --azul:#123a6b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--fondo);
+    color:var(--tinta);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+
+  /* ---------- ticker ---------- */
+  .ticker{
+    background:var(--rojo);color:#fff;overflow:hidden;white-space:nowrap;
+    font-size:.8rem;font-weight:600;letter-spacing:.01em;padding:7px 0;
+  }
+  .ticker span{display:inline-block;padding-left:100%;animation:corre 34s linear infinite}
+  @keyframes corre{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+  @media (prefers-reduced-motion:reduce){.ticker span{animation:none;padding-left:12px}}
+
+  /* ---------- cabecera ---------- */
+  header.masthead{
+    background:var(--papel);border-bottom:3px solid var(--tinta);
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .fecha-linea{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:.72rem;color:var(--gris);padding:8px 0;border-bottom:1px solid var(--linea);
+  }
+  .logo{text-align:center;padding:18px 0 12px}
+  .logo h1{
+    font-family:'Bitter',Georgia,serif;font-weight:900;font-size:clamp(2.2rem,7vw,3.6rem);
+    letter-spacing:-.02em;line-height:1;
+  }
+  .logo p{font-size:.8rem;color:var(--gris);margin-top:6px}
+  nav{border-top:1px solid var(--linea);display:flex;gap:22px;justify-content:center;
+      flex-wrap:wrap;padding:10px 0;font-size:.82rem;font-weight:600}
+  nav a{text-decoration:none;color:var(--gris)}
+  nav a.on{color:var(--rojo)}
+
+  /* ---------- nota ---------- */
+  main{max-width:760px;margin:0 auto;background:var(--papel);
+       border-left:1px solid var(--linea);border-right:1px solid var(--linea)}
+  .cuerpo{padding:28px 26px 40px}
+  .miga{font-size:.72rem;color:var(--gris);margin-bottom:14px}
+  .miga b{color:var(--rojo)}
+  .urgente{
+    display:inline-block;background:var(--rojo);color:#fff;font-size:.68rem;
+    font-weight:700;padding:4px 9px;margin-bottom:14px
+  }
+  h2.titular{
+    font-family:'Bitter',Georgia,serif;font-weight:900;
+    font-size:clamp(1.7rem,5vw,2.5rem);line-height:1.14;letter-spacing:-.015em;margin-bottom:16px
+  }
+  .bajada{font-size:1.06rem;color:#33383f;border-left:3px solid var(--rojo);
+          padding-left:14px;margin-bottom:22px}
+  .firma{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;
+         border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);
+         padding:11px 0;font-size:.78rem;color:var(--gris);margin-bottom:26px}
+  .firma b{color:var(--tinta)}
+  .cuerpo p{margin-bottom:17px;font-size:1.02rem}
+  .cuerpo p.entrada b:first-child{font-weight:700}
+  h3{font-family:'Bitter',Georgia,serif;font-size:1.22rem;margin:30px 0 12px;line-height:1.3}
+  blockquote{
+    font-family:'Bitter',Georgia,serif;font-style:italic;font-size:1.18rem;line-height:1.45;
+    border-top:2px solid var(--tinta);border-bottom:2px solid var(--tinta);
+    padding:18px 0;margin:26px 0;color:#22262b
+  }
+  blockquote cite{display:block;font-family:'Inter',sans-serif;font-style:normal;
+                  font-size:.76rem;color:var(--gris);margin-top:10px}
+  ol.pasos{margin:0 0 20px 20px}
+  ol.pasos li{margin-bottom:9px;font-size:1rem}
+  .ficha{
+    background:#f7f8fa;border:1px solid var(--linea);border-top:4px solid var(--azul);
+    padding:18px 20px;margin:26px 0
+  }
+  .ficha h4{font-family:'Bitter',serif;font-size:1rem;margin-bottom:10px}
+  .ficha dl{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:.88rem}
+  .ficha dt{color:var(--gris)}
+  .ficha dd{font-weight:600}
+  .faq{border-top:1px solid var(--linea);padding-top:6px;margin:26px 0}
+  .faq details{border-bottom:1px solid var(--linea);padding:11px 0}
+  .faq summary{cursor:pointer;font-weight:600;font-size:.95rem}
+  .faq p{margin:9px 0 2px;font-size:.94rem;color:#3a4048}
+
+  /* ---------- secundarias ---------- */
+  .mas{max-width:1080px;margin:34px auto 0;padding:0 20px}
+  .mas h5{font-family:'Bitter',serif;font-size:1.05rem;border-bottom:2px solid var(--tinta);
+          padding-bottom:7px;margin-bottom:18px}
+  .rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  article.tarjeta{background:var(--papel);border:1px solid var(--linea);padding:18px}
+  article.tarjeta .et{font-size:.68rem;font-weight:700;color:var(--rojo);margin-bottom:7px}
+  article.tarjeta h6{font-family:'Bitter',serif;font-size:1.08rem;line-height:1.28;margin-bottom:9px}
+  article.tarjeta p{font-size:.9rem;color:#41474f}
+
+  footer{margin-top:44px;background:var(--tinta);color:#b7bcc4;padding:26px 0 34px;font-size:.8rem}
+  footer .wrap p{margin-bottom:9px}
+  .aviso{border:1px dashed #6a717b;padding:12px 14px;color:#e3e6ea;font-size:.78rem}
+</style>
+</head>
+<body>
+
+<div class="ticker"><span>
+  🚨 ÚLTIMA HORA: Registro Civil notifica a portadoras del nombre Iliana &nbsp;·&nbsp;
+  🏃 11 DE OCTUBRE: fecha límite para acreditar los 5 kilómetros &nbsp;·&nbsp;
+  📍 Estadio Akron, Zapopan: salida del 5K a las 6:50 a.m. &nbsp;·&nbsp;
+  ⚠️ Cupo limitado a 2,500 participantes &nbsp;·&nbsp;
+  🚦 Tráfico ZMG — tu noticia, a tu paso &nbsp;·&nbsp;
+</span></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="fecha-linea">
+      <span>Domingo 7 de septiembre de 2026 · Guadalajara, Jalisco</span>
+      <span>Edición digital</span>
+    </div>
+    <div class="logo">
+      <h1>Tráfico ZMG</h1>
+      <p>Lo que se mueve en la Zona Metropolitana de Guadalajara</p>
+    </div>
+    <nav>
+      <a href="#" class="on">Comunidad</a>
+      <a href="#deportes">Deportes</a>
+      <a href="#ciencia">Ciencia</a>
+      <a href="#">Tráfico</a>
+      <a href="#">Jalisco</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="cuerpo">
+    <p class="miga">Inicio › Comunidad › <b>Registro Civil</b></p>
+    <span class="urgente">ÚLTIMA HORA · MEDIDA POLÉMICA</span>
+
+    <h2 class="titular">Todas las personas registradas como Iliana deberán acreditar una carrera de 5 kilómetros o perderán la nacionalidad</h2>
+
+    <p class="bajada">La disposición, aplicable únicamente al nombre Iliana en cualquiera de sus grafías, fija como fecha límite el 11 de octubre y establece la Carrera Omnilife, en el Estadio Akron, como la única sede válida para el trámite.</p>
+
+    <div class="firma">
+      <span>Por <b>Redacción Tráfico ZMG</b></span>
+      <span>Guadalajara, Jal.</span>
+      <span>Actualizado hace 14 minutos</span>
+    </div>
+
+    <p class="entrada"><b>GUADALAJARA, JALISCO.</b> — Una disposición administrativa difundida esta mañana ha generado desconcierto entre miles de mujeres de la Zona Metropolitana de Guadalajara. De acuerdo con la información que comenzó a circular, toda persona registrada con el nombre <b>Iliana</b> deberá acreditar la conclusión de una carrera de cinco kilómetros antes del <b>11 de octubre de 2026</b> o enfrentará un proceso de pérdida de la nacionalidad.</p>
+
+    <p>La medida no contempla excepciones por grafía. Quedan comprendidas las variantes <b>Iliana, Ileana, Illiana y Yliana</b>, así como los casos en que el nombre aparezca en segundo lugar dentro del acta. Tampoco distingue entre quienes usan el nombre de manera cotidiana y quienes solo lo conservan en documentos oficiales.</p>
+
+    <p>Según la versión que se ha difundido, el criterio para haber seleccionado ese nombre en particular no ha sido explicado. Fuentes cercanas al procedimiento se limitaron a señalar que la lista fue elaborada “por orden alfabético” y que el nombre Iliana quedó en la primera posición del padrón revisado.</p>
+
+    <h3>Qué se debe acreditar</h3>
+
+    <p>El requisito no admite constancias médicas, comprobantes de gimnasio ni capturas de aplicaciones de running. La única forma válida de acreditación sería la participación presencial en la <b>Carrera Omnilife</b>, programada para el domingo 11 de octubre en el Estadio Akron, en Zapopan.</p>
+
+    <ol class="pasos">
+      <li>Registrarse en la distancia de <b>5 kilómetros</b> antes del cierre de inscripciones.</li>
+      <li>Presentarse el día del evento y tomar la salida a las <b>6:50 de la mañana</b>.</li>
+      <li>Completar el recorrido y <b>cruzar la línea de meta</b>. El tiempo no es relevante: se puede caminar.</li>
+      <li>Recibir y conservar la <b>medalla de finalista</b>, que funciona como comprobante físico.</li>
+      <li>Presentar la medalla, junto con el acta de nacimiento, dentro de los cinco días hábiles posteriores.</li>
+    </ol>
+
+    <blockquote>
+      “No importa el tiempo, no importa si caminas. Importa que cruces la meta y que traigas la medalla.”
+      <cite>Vocería del procedimiento, según la versión difundida</cite>
+    </blockquote>
+
+    <div class="ficha">
+      <h4>Datos del evento señalado como sede única</h4>
+      <dl>
+        <dt>Fecha</dt><dd>Domingo 11 de octubre de 2026</dd>
+        <dt>Sede</dt><dd>Estadio Akron, Zapopan, Jalisco</dd>
+        <dt>Salida 5 km</dt><dd>6:50 a.m.</dd>
+        <dt>Otras distancias</dt><dd>10 km (6:40 a.m.) y 15 km (6:30 a.m.)</dd>
+        <dt>Cupo</dt><dd>2,500 participantes</dd>
+        <dt>Cierre de inscripciones</dt><dd>Viernes previo, 18:00 horas</dd>
+      </dl>
+    </div>
+
+    <h3>El cupo, el verdadero problema</h3>
+
+    <p>El punto que más preocupación ha generado no es la distancia, sino el <b>cupo limitado</b>. La carrera admite un máximo de 2,500 participantes en total, repartidos entre las tres distancias, y las inscripciones cierran el viernes previo al evento a las seis de la tarde.</p>
+
+    <p>Esto significa que, en la práctica, las Ilianas de la ciudad estarían compitiendo entre ellas por un lugar antes de competir en la carrera. En grupos de corredores de Guadalajara ya se habla de quienes se inscribieron “por si acaso” desde que apareció la información, y de otras que aún no se enteran de que el nombre en su acta las involucra.</p>
+
+    <p>Cinco kilómetros, coinciden los corredores consultados, es una distancia accesible incluso para quien nunca ha entrenado. La mayoría de las personas puede completarla caminando en poco más de una hora. El obstáculo real, insisten, es alcanzar un lugar antes de que se agote el registro.</p>
+
+    <h3>Reacciones</h3>
+
+    <p>La noticia ha provocado conversaciones particulares en familias donde hay una Iliana que nunca ha corrido y un hermano, una amiga o una pareja que sí. Para algunos, lo que empezó como un trámite absurdo se convirtió en el pretexto perfecto para arrastrar a alguien a su primera carrera.</p>
+
+    <p>También hay quienes lo han tomado con humor. En redes sociales circulan mensajes de mujeres que aseguran que llevaban años diciendo que iban a empezar a correr “el lunes” y que, finalmente, alguien les puso fecha.</p>
+
+    <div class="faq">
+      <details><summary>¿Aplica si Iliana es mi segundo nombre?</summary>
+        <p>Sí. La disposición no distingue el orden en que aparece el nombre dentro del acta de nacimiento.</p></details>
+      <details><summary>¿Puede correr alguien más en mi lugar?</summary>
+        <p>No. La acreditación es personal y el número de competidor está ligado al nombre registrado.</p></details>
+      <details><summary>¿Sirve correr los 5 km por mi cuenta y grabarlos?</summary>
+        <p>No. Solo se acepta la medalla de finalista entregada en meta el día del evento.</p></details>
+      <details><summary>¿Y si no alcanzo lugar por el cupo?</summary>
+        <p>No hay prórroga contemplada. Es el punto que más inconformidad ha generado.</p></details>
+    </div>
+
+    <p>Al final, la disposición deja una sola pregunta sobre la mesa para las Ilianas de Guadalajara, y faltan poco más de cuatro semanas para responderla: <b>¿cinco kilómetros a cambio de conservar tu nacionalidad?</b></p>
+
+    <p>Porque, al menos en esta historia, el trámite es bastante sencillo: inscribirse, salir a las 6:50, cruzar la meta y quedarse con la medalla.</p>
+  </div>
+</main>
+
+<section class="mas">
+  <h5>También en Tráfico ZMG</h5>
+  <div class="rejilla">
+    <article class="tarjeta" id="deportes">
+      <p class="et">CLÁSICO TAPATÍO</p>
+      <h6>El Akron se prepara para una jornada doble: carrera por la mañana, futbol por la tarde</h6>
+      <p>La logística del estacionamiento y los accesos al Circuito JVC será el principal reto del domingo, según los operadores del inmueble.</p>
+    </article>
+    <article class="tarjeta" id="ciencia">
+      <p class="et">HALLAZGO DEPORTIVO</p>
+      <h6>Estudio afirma que caminar un 5K quema casi lo mismo que correrlo</h6>
+      <p>El análisis compara gasto calórico total y no por minuto, lo que ha provocado un debate entre entrenadores de la ciudad.</p>
+    </article>
+    <article class="tarjeta">
+      <p class="et">TRÁFICO</p>
+      <h6>Cierres viales previstos en Zapopan la mañana del 11 de octubre</h6>
+      <p>Circuito JVC y avenidas aledañas operarán con carriles reducidos desde las 5:00 horas y hasta el mediodía.</p>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Tráfico ZMG · Contenido informativo y de entretenimiento local · Guadalajara, Jalisco</p>
+    <p class="aviso">⚠️ Esta nota es <b>completamente ficticia</b>. No existe ninguna disposición que condicione la nacionalidad de nadie a correr una carrera. Los datos del evento son reales; el resto forma parte de un ejercicio hipotético y humorístico.</p>
+  </div>
+</footer>
+
+</body>
+</html>
